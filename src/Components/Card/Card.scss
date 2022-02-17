@@ -1,0 +1,107 @@
+
+.card {
+	border: 1px solid red;
+	position: relative;
+	width: 245px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 4px;
+	&__check {
+
+	}
+
+	&__foto {
+		margin-top: 40px;
+		img {
+			width: 237px;
+			height: 237px;
+		}
+		
+	}
+
+	&__present {
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		z-index: 2;
+	}
+
+	&__title {
+		padding: 0 5px;
+	}
+	&__input-title {
+		margin-top: 10px;
+		input {
+			width: 100px;
+		}
+	}
+	&__price {
+		margin-top: 20px;
+		font-size: 18px;
+		font-weight: 700;
+	}
+	&__input-stars {
+		margin-top: 10px;
+		input {
+			width: 50px;
+		}
+	}
+	&__stars {
+		margin-top: 20px;
+	}
+	&__close {
+		position: absolute;
+		bottom: 90px;
+		right: 20px;
+		width: 25px;
+		height: 25px;
+		border: 1px dotted rgba(0,0,0,.25);
+		&::before {
+			content: '';
+			position: absolute;
+			width: 1px;
+			height: 25px;
+			top: 0;
+			left: -60px;
+			background-color: #000;
+			transition: all .5s;
+		}
+		&:hover {
+			&::before {
+				content: '';
+				position: absolute;
+				width: 3px;
+				height: 25px;
+				top: 0;
+				left: 10px;
+				background-color: #000;
+				transform: rotate(45deg);
+			}
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			width: 1px;
+			height: 25px;
+			top: 0;
+			right: 65px;
+			background-color: #000;
+			transition: all .5s;
+		}
+		&:hover {
+			&::after {
+				content: '';
+				position: absolute;
+				width: 3px;
+				height: 25px;
+				top: 0;
+				left: 10px;
+				background-color: #000;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
