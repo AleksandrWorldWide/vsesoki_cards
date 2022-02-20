@@ -1,4 +1,6 @@
 
+
+
 const Header = (props) => (
 	<header className="header">
 		<div className="header__title">{props.pageTitle}</div>
@@ -11,6 +13,7 @@ const Header = (props) => (
 		<div className="header__show">
 			<button className="btn" onClick={props.handleShow}>Show</button>
 		</div>
+		{props.children}
 	</header>
 )
 
